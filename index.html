@@ -5,11 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>rock-paper-scissors</title>
+    <link rel="stylesheet" href="styles/style.css">
     <script type="text/javascript" src="scripts/main.js"></script>
 </head>
 <body>
     <h1>This is a classic rock-paper-scissors game</h1>
-    <h2>At the moment this is a console based game, but I promise to return and update it, once I learn more :)</h2>
-    <button onclick="game()">Play the game!</button>
+    <h2>At the moment this is a console based game, but I promise to return and update it, once I learn more :)</h2>  
+    <form>
+        Amount of games:
+        <input type="number" id="num" min=0 value=0>
+        <input type="button" onclick="saveAmount()" value="Save">
+    </form>
+    <p id="info"></p>
+    <p id="beginning"></p>
+    <button id="rock" onclick="rockChoice()">Rock</button>
+    <button id="paper" onclick="paperChoice()">Paper</button>
+    <button id="scissors" onclick="scissorsChoice()">Scissors</button>
+    <p id="midGame"></p>
+    <p id="score"></p>
+    <input type="button" onclick="resetScore()" value="Reset">
 </body>
 </html>
