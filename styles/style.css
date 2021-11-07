@@ -1,0 +1,36 @@
+html {
+  background-image: url("background.jpg");
+  height: 100%;
+  width: 100%;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: center;
+  max-width: 1362.33px;
+  max-height: 1450.55px;
+  margin: auto;
+  color: white;
+  font-size: 30px;
+}
+
+#play, #reset {
+  background-color: #f6e7bb;
+  font-size: 25px;
+  border-radius: 5px;
+}
+
+#num {
+  box-sizing: content-box;
+  font-size: 30px;
+  padding-bottom: 5px;
+  width: 50px;
+  border-radius: 5px;
+}
+
+#rock, #paper, #scissors {
+  height: 100px;
+  width: 100px;
+  padding: 0px 50px 0px 50px;
+  cursor: pointer;
+}
+
