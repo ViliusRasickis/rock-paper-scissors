@@ -9,20 +9,23 @@
     <script type="text/javascript" src="scripts/main.js"></script>
 </head>
 <body>
-    <h1>This is a classic rock-paper-scissors game</h1>
-    <h2>At the moment this is a console based game, but I promise to return and update it, once I learn more :)</h2>  
+    <h1>Rock-Paper-Scissors</h1>
+    <h2>Can you beat the odds?</h2>  
     <form>
-        Amount of games:
-        <input type="number" id="num" min=0 value=0>
-        <input type="button" onclick="saveAmount()" value="Save">
+        # of games to play:
+        <input type="number" id="num" min=0 max=99 value=0>
+        <input type="button" id="play" onclick="saveAmount()" value="Play">
     </form>
     <p id="info"></p>
     <p id="beginning"></p>
-    <button id="rock" onclick="rockChoice()">Rock</button>
-    <button id="paper" onclick="paperChoice()">Paper</button>
-    <button id="scissors" onclick="scissorsChoice()">Scissors</button>
+    <img id="rock" src="styles/rockImage.png" alt="rock" onclick="rockChoice()">
+    <audio id="rocksong" src="sounds/rock.wav"></audio>   
+    <img id="paper" src="styles/paperImage.png" alt="paper" onclick="paperChoice()">
+    <audio id="papersong" src="sounds/paper.wav"></audio>
+    <img id="scissors" src="styles/scissorsImage.png" alt="scissors" onclick="scissorsChoice()">
+    <audio id="scissorssong" src="sounds/scissors.wav"></audio>
     <p id="midGame"></p>
     <p id="score"></p>
-    <input type="button" onclick="resetScore()" value="Reset">
+    <button id="reset" onclick="resetScore()">Reset</button>
 </body>
 </html>

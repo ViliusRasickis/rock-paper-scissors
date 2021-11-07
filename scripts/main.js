@@ -33,18 +33,21 @@ function saveAmount(event) {
 function rockChoice() {
     const rockElement = document.getElementById('rock');
     let rockId = rockElement.id;
+    playSound(rockId);
     gameStart(rockId);
 }
 
 function paperChoice() {
     const paperElement = document.getElementById('paper')
     let paperId = paperElement.id;
+    playSound(paperId);
     gameStart(paperId);
 }
 
 function scissorsChoice() {
     const scissorsElement = document.getElementById('scissors');
     let scissorsId = scissorsElement.id;
+    playSound(scissorsId);
     gameStart(scissorsId);
 }
 
@@ -115,4 +118,20 @@ function resetScore() {
     beginning.innerHTML = '';
     midGame.innerHTML = '';
     score.innerHTML = '';
+}
+
+function playSound(input) {
+    if(input === 'rock') {
+        const audio = document.getElementById('rocksong');
+        audio.currentTime = 0;
+        audio.play();
+    } else if (input === 'paper') {
+        const audio = document.getElementById('papersong');
+        audio.currentTime = 0;
+        audio.play();
+    } else {
+        const audio = document.getElementById('scissorssong');
+        audio.currentTime = 0;
+        audio.play();
+    }
 }
